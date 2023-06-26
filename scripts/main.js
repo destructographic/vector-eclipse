@@ -39,15 +39,36 @@ function populateTitleScreen() {
 
 
 
-
 function gameLoop() {
   const titleLogo = document.getElementById('title-logo');
   const startGameText = document.querySelector('.start-game-text');
+  const gameArea = document.getElementById('game-area'); 
 
   // hide titleScreen content
   titleLogo.style.display = 'none';
   startGameText.style.display = 'none';
 
+  // add elements to "game-area"
+  // TODO: build this structure in html instead with 
+  // preset display=none and just toggle display
+  const shell = document.createElement('div');
+  shell.id = 'shell';
+  gameArea.appendChild(shell);
+  const dashboard = document.createElement('div');
+  dashboard.id = 'dashboard';
+  shell.appendChild(dashboard);
+  const background = document.createElement('div');
+  background.className = 'background';
+  dashboard.appendChild(background);
+  const left = document.createElement('div');
+  left.id = 'left';
+  dashboard.appendChild(left);
+  const middle = document.createElement('div');
+  middle.id = 'middle';
+  dashboard.appendChild(middle);
+  const right = document.createElement('div');
+  right.id = 'right';
+  dashboard.appendChild(right);
 }
 
 
