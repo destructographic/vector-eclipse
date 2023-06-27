@@ -54,6 +54,7 @@ function gameLoop() {
   const shell = document.createElement('div');
   shell.id = 'shell';
   gameArea.appendChild(shell);
+  shell.style.backgroundImage = `url(${preloadedAssets['assets/ve-dash1.png'].src})`;
   const dashboard = document.createElement('div');
   dashboard.id = 'dashboard';
   shell.appendChild(dashboard);
