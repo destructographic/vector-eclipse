@@ -6,7 +6,7 @@ const assetsForPreload = [
     { src: 'assets/starfield_test2.png', type: 'image' },
     { src: 'assets/ve_logo_dither.png', type: 'image' },
     { src: 'assets/ve-dash1.png', type: 'image' },
-   // { src: 'assets/track01.mp3', type: 'sound' },
+    { src: 'assets/nebulae.png', type: 'image' },
  ];
 
 

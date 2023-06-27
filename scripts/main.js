@@ -19,6 +19,7 @@ preloadAssets()
 function populateTitleScreen() {
     const gameArea = document.getElementById('game-area');  
     gameArea.style.backgroundImage = `url(${preloadedAssets['assets/space_bg1.png'].src}), 
+    url(${preloadedAssets['assets/nebulae.png'].src}), 
     url(${preloadedAssets['assets/space_bg_dust1.png'].src}), 
     url(${preloadedAssets['assets/starfield_test2.png'].src})`;
   
