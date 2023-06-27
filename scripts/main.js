@@ -62,12 +62,26 @@ function gameLoop() {
   const background = document.createElement('div');
   background.className = 'background';
   dashboard.appendChild(background);
+  // create the "left" screen
   const left = document.createElement('div');
   left.id = 'left';
   dashboard.appendChild(left);
+  // create the "middle" screen
   const middle = document.createElement('div');
   middle.id = 'middle';
   dashboard.appendChild(middle);
+  // add iframe to "middle" screen 
+  const iframe = document.createElement('iframe');
+  iframe.width = '560';
+  iframe.height = '315';
+  iframe.src = 'https://www.youtube.com/embed/IixELyhvSKc';
+  iframe.title = 'YouTube video player';
+  iframe.frameBorder = '0';
+  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  iframe.allowFullscreen = false;
+  iframe.autoplay = true;
+  middle.appendChild(iframe);
+  // create the "right" screen
   const right = document.createElement('div');
   right.id = 'right';
   dashboard.appendChild(right);
