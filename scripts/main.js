@@ -17,38 +17,47 @@ preloadAssets()
 
 
 function populateTitleScreen() {
-    const gameArea = document.getElementById('game-area');  
-    gameArea.style.backgroundImage = `url(${preloadedAssets['assets/space_bg1.png'].src}), 
-    url(${preloadedAssets['assets/nebulae.png'].src}), 
-    url(${preloadedAssets['assets/space_bg_dust1.png'].src}), 
-    url(${preloadedAssets['assets/starfield_test2.png'].src})`;
-  
-    const titleLogo = document.createElement('img');
-    titleLogo.id = 'title-logo';
-    titleLogo.src = preloadedAssets['assets/ve_logo_dither.png'].src;
-    gameArea.appendChild(titleLogo);
-  
-    const startGameText = document.createElement('p');
-    startGameText.textContent = 'START GAME';
-    startGameText.classList.add('start-game-text');
-    gameArea.appendChild(startGameText);
+  const gameArea = document.getElementById('game-area');  
+  gameArea.style.backgroundImage = `url(${preloadedAssets['assets/space_bg1.png'].src}), 
+  url(${preloadedAssets['assets/nebulae.png'].src}), 
+  url(${preloadedAssets['assets/space_bg_dust1.png'].src}), 
+  url(${preloadedAssets['assets/starfield_test2.png'].src})`;
 
-    // add event listener to startGameText
-    startGameText.addEventListener('click', gameLoop);
-  }
+  const titleLogo = document.createElement('img');
+  titleLogo.id = 'title-logo';
+  titleLogo.src = preloadedAssets['assets/ve_logo_dither.png'].src;
+  gameArea.appendChild(titleLogo);
 
+  const startGameText = document.createElement('p');
+  startGameText.textContent = 'START GAME';
+  startGameText.classList.add('start-game-text');
+  gameArea.appendChild(startGameText);
+
+  // add event listener to startGameText
+  startGameText.addEventListener('click', gameLoop);
+}
 
 
 
 function gameLoop() {
   const titleLogo = document.getElementById('title-logo');
   const startGameText = document.querySelector('.start-game-text');
-  const gameArea = document.getElementById('game-area'); 
-
+  
   // hide titleScreen content
   titleLogo.style.display = 'none';
   startGameText.style.display = 'none';
 
+  drawCockpit();
+  
+}
+
+
+
+
+
+
+function drawCockpit() {
+  const gameArea = document.getElementById('game-area'); 
   // add elements to "game-area"
   // TODO: build this structure in html instead with 
   // preset display=none and just toggle display

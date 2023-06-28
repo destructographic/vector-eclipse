@@ -7,6 +7,8 @@ const assetsForPreload = [
     { src: 'assets/ve_logo_dither.png', type: 'image' },
     { src: 'assets/ve-dash1.png', type: 'image' },
     { src: 'assets/nebulae.png', type: 'image' },
+    { src: 'assets/halftone-screen-left.png', type: 'image' },
+    { src: 'assets/halftone-screen-right.png', type: 'image' },
  ];
 
 
