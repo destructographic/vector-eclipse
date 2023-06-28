@@ -47,8 +47,7 @@ function gameLoop() {
   titleLogo.style.display = 'none';
   startGameText.style.display = 'none';
 
-  drawCockpit();
-  
+  drawCockpit(); 
 }
 
 
@@ -71,10 +70,16 @@ function drawCockpit() {
   const background = document.createElement('div');
   background.className = 'background';
   dashboard.appendChild(background);
+  
   // create the "left" screen
   const left = document.createElement('div');
   left.id = 'left';
   dashboard.appendChild(left);
+  // add image to the left screen
+  const leftImage = document.createElement('img');
+  leftImage.src = preloadedAssets['assets/halftone-screen-left.png'].src;
+  left.appendChild(leftImage);
+
   // create the "middle" screen
   const middle = document.createElement('div');
   middle.id = 'middle';
@@ -90,17 +95,23 @@ function drawCockpit() {
   iframe.allowFullscreen = false;
   iframe.autoplay = true;
   middle.appendChild(iframe);
+
   // create the "right" screen
   const right = document.createElement('div');
   right.id = 'right';
   dashboard.appendChild(right);
+  // add image to the right screen
+  const rightImage = document.createElement('img');
+  rightImage.src = preloadedAssets['assets/halftone-screen-right.png'].src;
+  right.appendChild(rightImage);
+
 }
 
 
 
 
 
-  function gameLoopText() {
+  function textBasedGame() {
   // console.log("called: gameLoop()");
   const titleLogo = document.getElementById('title-logo');
   const startGameText = document.querySelector('.start-game-text');
